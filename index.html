@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <meta name="theme-color" content="#121212">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Brain Challenge Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <div class="brain-challenge">
+                Brain <span class="dot"> </span>Challenge App
+            </div>
+            <div class="difficulty-selection">
+                <h2>Select Difficulty:</h2>
+                <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <div class="header">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="timer">
+                    <span id="time">30</span>s
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <div class="question-text" id="question-text">Question goes here</div>
+                <div id="loading" class="loading hidden"></div>
+                <div id="options-container" class="options-container">
+                    <!-- Options will be inserted here -->
+                </div>
+            </div>
+
+            <div id="feedback" class="feedback hidden">
+                <p id="feedback-text"></p>
+                <div id="additional-info"></div>
+            </div>
+        </div>
+
+        <div id="end-screen" class="screen hidden">
+            <div class="brain-challenge">
+                Brain<span class="dot"></span>Challenge
+            </div>
+            <h2>Game Over!</h2>
+            <div class="final-score">Final Score: <span id="final-score">0</span></div>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="timer-sound" loop>
+        <source src="timer.wav" type="audio/mpeg">
+    </audio>
+    <audio id="correct-sound">
+        <source src="correct.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wrong-sound">
+        <source src="wrong.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

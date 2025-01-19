@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Interactive Quiz Game",
+    "version": "1.0",
+    "description": "A fun and interactive quiz game with multiple difficulty levels",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [],
+    "host_permissions": [
+        "https://opentdb.com/*"
+    ]
+}
